@@ -1,3 +1,17 @@
-l = [1, 3, 3, 2, 4]  # list
-s = {1, 3, 3, 2, 4}  # set
-print(l, s)  # [1, 3, 3, 2, 4] {1, 2, 3, 4}
+university = "Inha\nUniversity!"
+# university = r"Inha\nUniversity!"  # raw string
+# print(university)
+
+# slicing
+print(university[:4])
+print(university[:-11])
+print(len(university))
+print(university[0:len(university)])
+print(university[:16])
+print(university[::2])
+
+# number1 = input("First number : ")
+# number2 = input("Second number : ")
+# print(number1 + number2)  # concatenation
+# print(number1 * 3)  # duplicate
+# print(number1 + 3)  # TypeError: can only concatenate str (not "int") to str
