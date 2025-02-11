@@ -1,9 +1,3 @@
-letter = input('Input alphabet letter : ')
-vowels = {'a', 'e', 'i', 'o', 'u','e'}  # set
-#vowels[1] = 'z' # immutable
-#vowels = "aeiuo"  # str
-print(type(vowels))
-if letter in vowels:  # *in*
-    print(f'{letter} is a vowel~')
-else:
-    print(f'{letter} is a consonant!')
+l = [1, 3, 3, 2, 4]  # list
+s = {1, 3, 3, 2, 4}  # set
+print(l, s)  # [1, 3, 3, 2, 4] {1, 2, 3, 4}
