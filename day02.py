@@ -1,20 +1,18 @@
-# prime number
-numbers = input("Input first second number : ").split()
-n1 = int(numbers[0])
-n2 = int(numbers[1])
+n = int(input("Input number : "))
+is_prime = True
+if n >= 2:
+    i = 2
+    while i < n:
+        if n % i == 0:
+            is_prime = False  #count = count + 1
+            break
+        i += 1
 
-if n1 > n2:     #packing unpacking
-    n1, n2 = n2, n1
+else:
+    is_prime = False
 
-for number in range(n1, n2+1):
-    is_prime = True
-
-    if number < 2:
-        #pass
-        continue
-    else:
-        for i in range(2, number):
-            if number % i == 0:
-                is_prime = False
-                break
-        if is_prime: print(number, end=' ')
+#if count == 0:
+if is_prime:
+    print(f"{n} is prime number")
+else:
+    print(f"{n} is NOT prime number!")
