@@ -1,5 +1,6 @@
+# Assignment Day 02
+# v1.4) Make my_pow custom function instead of ** operator, power function and make it work.
 import math
-
 
 
 def my_pow(b, e) -> float:
@@ -9,18 +10,16 @@ def my_pow(b, e) -> float:
     :param e: exponent
     :return: the power result in the form of a real number
     """
-
     if e < 0:
         b = 1 / b
         e = e * -1
+
     result = 1
 
-    # 정수부분 실수부분 나누기
     i = int(e)
-    f = e - 1
+    f = e - i
 
-
-    for _ in range(i):  # for_ in range(e):
+    for _ in range(i):  # for k in range(e):
         result = result * b
 
     if f > 0:
@@ -28,10 +27,13 @@ def my_pow(b, e) -> float:
 
     return result
 
+
 print(my_pow(10, -2))
-print(my_pow(2,9)) # 512
+print(my_pow(2, 9))     #512
 print(my_pow(16, 0.5))  #4
-print(my_pow(4, 2)) #16
+print(my_pow(10, 3))    #1000
+print(my_pow(25, 0.5))  #5
+
 # print(math.exp(1))
 # print(math.e)
-print(math.log(3))
+# print(math.log(16, 2))
