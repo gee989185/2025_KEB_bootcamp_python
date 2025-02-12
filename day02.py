@@ -1,5 +1,4 @@
 # Assignment Day 02
-# v1.3) Rewrite the code using the power function instead of the ** operator.
 # v1.4) Make my_pow custom function instead of ** operator, power function and make it work.
 
 def is_prime(num) -> bool:
