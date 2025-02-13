@@ -1,19 +1,12 @@
-# # closure
-# def out_func(nout):               #
-#     def inner_func():             #
-#         return nout * nout        #
-#     return inner_func             #
-#
-#
-# x = out_func(9)
-# print(type(x))
-# print(x)
-# print(x())
+# SOLID
+#Open Clossed Princinple: 개방 폐쇄 원칙 (확장에는 열려 있고 수정에는 닫혀있는 원칙
 
-#inner function
-def out_func(nout):                 #2
-    def inner_func(nin):            #4
-        return nin * nin            #5
-    return inner_func(nout)         #3
+# !(factorial)
+def factorial_repetition(n) -> int:
+    result = 1
+    for i in range(2, n+1):
+        result *= i
+    return result
 
-print(out_func(5))                  #1
+number = int(input())
+print(f"{number}! = {factorial_repetition(number)}")
