@@ -1,52 +1,32 @@
-# decorator
-def description(f):  # closure
-    def inner(*args):
-        print(f.__name__)
-        print(f.__doc__)
-        r = f(*args)
-        return r
+# SOLID
+#Open Clossed Princinple: 개방 폐쇄 원칙 (확장에는 열려 있고 수정에는 닫혀있는 원칙)
 
-    return inner
+import time
 
 
-def squares(n):
-    """
-    제곱 함수
-    """
-    return n * n
+def time_decorator(func):
+    def wrapper(*arg):
+        start_time = time.time()
+        result = func(*arg)
+        end_time = time.time()
+        print(f"실행시간은 {end_time - start_time}초 걸렸습니다")
+        return result
+    return wrapper
 
-@description
-def power(b, e):
-    """
-    거듭제곱 함수
-    """
+@time_decorator
+def factorial_repetition(n) -> int:
     result = 1
-    for _ in range(e):
-        result = result * b
+    for i in range(2, n+1):
+        result *= i
     return result
 
 
-print(squares(7))               #49
 
-f1 = description(squares)       # decription + 49
-print(f1(9))
-print(power(2, 10))
-# f2 = description(power)
-# print(f2(2, 10))
 
-# print(squares(7))
-# print(squares.__doc__)
-
-# def my_range(first=0, last=5, step=1):
-#     number = first
-#     while number < last:
-#         yield number
-#         number += step
-#
-# r = my_range()
-# print(r, type(r))
-#
-# for x in r:
-#     print(x)
-# for x in r:
-#     print(x)
+number = int(input())
+ft = time_decorator(factorial_repetition)
+print(f" ft(number) :{number}! = {ft(number)}")
+#start_time = time.time()
+print(f"{number}! = {factorial_repetition(number)}")
+#end_time =  time.time()
+#print(end_time - start_time)
