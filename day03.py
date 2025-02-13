@@ -4,13 +4,20 @@
 # while문 안 쪽의 조건문을 줄이세요 hint. int로 하기
 import random
 
+
+# d_s_p = {"위스키": [ '초콜릿', 50_000]}
+# print(d_s_p["위스키"][1])      # output = 초콜릿
+
 # 술(sul), 안주(anzu) 설정: 리스트로 설정
 drinks_foods_sul = ["위스키", "와인","소주","고량주"]
 drinks_foods_anzu = ["초콜릿","치즈", "삼겹살", "양꼬치" ]
+prices_sul = [50_000, 30_000, 5_000, 7_500]
+
 
 # 술, 안주 추가
 drinks_foods_sul.extend(["사케", "막걸리"])
 drinks_foods_anzu.extend(["광어회", "낙곱새"])
+prices_sul.extend([20_000, 3_000])
 
 
 def print_menu(n):
